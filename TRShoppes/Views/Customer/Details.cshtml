@@ -44,27 +44,7 @@
 
         <dt>
             @Html.DisplayNameFor(model => model.Purchases)
-        </dt>
-        <dd>
-            <table class="table">
-                <tr>
-                    <th>Product Purchased</th>
-                    <th>Product</th>
-                </tr>
-                @foreach (var item in Model.Purchases)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Products.ProdDesc)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ProdPrice)
-                        </td>
-                    </tr>
-                }
-            </table>
-        </dd>
-
+        </dt>       
     </dl>
 </div>
 <p>
