@@ -12,6 +12,7 @@ namespace TRShoppes.Models
         public string LastName { get; set; }
         public int PurchaseID { get; set; }
         public DateTime PurchaseDate { get; set; }
+        
 
         public virtual ICollection<Purchase> Purchases { get; set; }
 

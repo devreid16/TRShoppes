@@ -1,0 +1,42 @@
+﻿@model TRShoppes.Models.Purchase
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Purchase</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProdDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProdDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdQty)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

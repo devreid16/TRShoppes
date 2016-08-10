@@ -34,22 +34,23 @@ namespace TRShoppes.DAL
             new Product{ProductID=3141,ProdUpc=066677788890,ProdDesc="Pants",ProdQty=24,ProdPrice=30.00m },
             new Product{ProductID=2021,ProdUpc=077788899000,ProdDesc="Skirts",ProdQty=33,ProdPrice=25.00m }
             };
-            context.SaveChanges();
+            products.ForEach(s => context.Products.Add(s));
+            context.SaveChanges();            
 
             var purchases = new List<Purchase>
             {
-            new Purchase{PurchaseID=1,CustomerID=1,ProductID=1050,ProdDesc="Coats",ProdQty=1,ProdPrice=100.00m },
-            new Purchase{PurchaseID=2,CustomerID=1,ProductID=4022,ProdDesc="Blouses",ProdQty=2,ProdPrice=20.00m },
-            new Purchase{PurchaseID=3,CustomerID=1,ProductID=4041,ProdDesc="TShirts",ProdQty=4,ProdPrice=10.00m },
-            new Purchase{PurchaseID=4,CustomerID=2,ProductID=1045,ProdDesc="Shoes",ProdQty=1,ProdPrice=50.00m },
-            new Purchase{PurchaseID=5,CustomerID=2,ProductID=3141,ProdDesc="Pants",ProdQty=2,ProdPrice=30.00m },
-            new Purchase{PurchaseID=6,CustomerID=2,ProductID=2021,ProdDesc="Skirts",ProdQty=1,ProdPrice=25.00m },
-            new Purchase{PurchaseID=7,CustomerID=3,ProductID=1050,ProdDesc="Coats",ProdQty=1,ProdPrice=100.00m },
-            new Purchase{PurchaseID=8,CustomerID=4,ProductID=1050,ProdDesc="Coats",ProdQty=1,ProdPrice=100.00m },
-            new Purchase{PurchaseID=9,CustomerID=4,ProductID=4022,ProdDesc="Blouses",ProdQty=2,ProdPrice=20.00m },
-            new Purchase{PurchaseID=10,CustomerID=5,ProductID=4041,ProdDesc="TShirts",ProdQty=3,ProdPrice=10.00m },
-            new Purchase{PurchaseID=11,CustomerID=6,ProductID=1045,ProdDesc="Shoes",ProdQty=2,ProdPrice=50.00m },
-            new Purchase{PurchaseID=12,CustomerID=7,ProductID=3141,ProdDesc="Pants",ProdQty=2,ProdPrice=30.00m },
+            new Purchase{PurchaseID=1,ProductID=1050,ProdQty=1 },
+            new Purchase{PurchaseID=2,ProductID=4022,ProdQty=2 },
+            new Purchase{PurchaseID=3,ProductID=4041,ProdQty=4 },
+            new Purchase{PurchaseID=4,ProductID=1045,ProdQty=1 },
+            new Purchase{PurchaseID=5,ProductID=3141,ProdQty=2 },
+            new Purchase{PurchaseID=6,ProductID=2021,ProdQty=1 },
+            new Purchase{PurchaseID=7,ProductID=1050,ProdQty=1 },
+            new Purchase{PurchaseID=8,ProductID=1050,ProdQty=1 },
+            new Purchase{PurchaseID=9,ProductID=4022,ProdQty=2 },
+            new Purchase{PurchaseID=1,ProductID=4041,ProdQty=3 },
+            new Purchase{PurchaseID=1,ProductID=1045,ProdQty=2 },
+            new Purchase{PurchaseID=1,ProductID=3141,ProdQty=2 }
             };
 
             purchases.ForEach(s => context.Purchases.Add(s));

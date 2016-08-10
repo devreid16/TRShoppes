@@ -27,24 +27,36 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PurchaseID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PurchaseID)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.PurchaseDate)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.PurchaseDate)
         </dd>
-
+        
         <dt>
             @Html.DisplayNameFor(model => model.Purchases)
-        </dt>       
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                </tr>
+                @foreach (var item in Model.Purchases)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.ProdDesc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProdQty)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
     </dl>
 </div>
 <p>

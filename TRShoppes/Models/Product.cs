@@ -8,8 +8,8 @@ namespace TRShoppes.Models
 {
     public class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ProductID { get; set; }
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ProductID { get; set; }       
         public long ProdUpc { get; set; }
         public string ProdDesc { get; set; }
         public int ProdQty { get; set; }
