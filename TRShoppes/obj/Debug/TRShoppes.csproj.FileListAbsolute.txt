@@ -46,3 +46,5 @@ C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\Pag
 C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.Mvc.dll
 C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.xml
 C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.Mvc.xml
+C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\obj\Debug\TRShoppes.Migrations.InitialCreate.resources
+C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\obj\Debug\TRShoppes.csproj.GenerateResource.Cache
