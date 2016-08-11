@@ -42,3 +42,7 @@ c:\users\reida\documents\visual studio 2015\Projects\TRShoppes\TRShoppes\bin\Ent
 c:\users\reida\documents\visual studio 2015\Projects\TRShoppes\TRShoppes\bin\EntityFramework.SqlServer.dll
 c:\users\reida\documents\visual studio 2015\Projects\TRShoppes\TRShoppes\bin\EntityFramework.xml
 c:\users\reida\documents\visual studio 2015\Projects\TRShoppes\TRShoppes\bin\EntityFramework.SqlServer.xml
+C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.dll
+C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.Mvc.dll
+C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.xml
+C:\Users\reida\Documents\Visual Studio 2015\Projects\TRShoppes\TRShoppes\bin\PagedList.Mvc.xml
