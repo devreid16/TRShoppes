@@ -24,7 +24,6 @@ namespace TRShoppes.DAL
 
             customers.ForEach(s => context.Customers.Add(s));
             context.SaveChanges();
-
             var products = new List<Product>
             {
             new Product{ProductID=1050,ProdUpc=022255588890,ProdDesc="Coats",ProdQty=30,ProdPrice=100.00m },
@@ -35,24 +34,22 @@ namespace TRShoppes.DAL
             new Product{ProductID=2021,ProdUpc=077788899000,ProdDesc="Skirts",ProdQty=33,ProdPrice=25.00m }
             };
             products.ForEach(s => context.Products.Add(s));
-            context.SaveChanges();            
-
+            context.SaveChanges();
             var purchases = new List<Purchase>
             {
-            new Purchase{PurchaseID=1,ProductID=1050,ProdQty=1 },
-            new Purchase{PurchaseID=2,ProductID=4022,ProdQty=2 },
-            new Purchase{PurchaseID=3,ProductID=4041,ProdQty=4 },
-            new Purchase{PurchaseID=4,ProductID=1045,ProdQty=1 },
-            new Purchase{PurchaseID=5,ProductID=3141,ProdQty=2 },
-            new Purchase{PurchaseID=6,ProductID=2021,ProdQty=1 },
-            new Purchase{PurchaseID=7,ProductID=1050,ProdQty=1 },
-            new Purchase{PurchaseID=8,ProductID=1050,ProdQty=1 },
-            new Purchase{PurchaseID=9,ProductID=4022,ProdQty=2 },
-            new Purchase{PurchaseID=1,ProductID=4041,ProdQty=3 },
-            new Purchase{PurchaseID=1,ProductID=1045,ProdQty=2 },
-            new Purchase{PurchaseID=1,ProductID=3141,ProdQty=2 }
+            new Purchase{ProductID=1050,CustomerID=1,ProdQty=1 },
+            new Purchase{ProductID=4022,CustomerID=2,ProdQty=2 },
+            new Purchase{ProductID=4041,CustomerID=3,ProdQty=4 },
+            new Purchase{ProductID=1045,CustomerID=4,ProdQty=1 },
+            new Purchase{ProductID=3141,CustomerID=5,ProdQty=2 },
+            new Purchase{ProductID=2021,CustomerID=6,ProdQty=1 },
+            new Purchase{ProductID=1050,CustomerID=7,ProdQty=1 },
+            new Purchase{ProductID=1050,CustomerID=8,ProdQty=1 },
+            new Purchase{ProductID=4022,CustomerID=8,ProdQty=2 },
+            new Purchase{ProductID=4041,CustomerID=1,ProdQty=3 },
+            new Purchase{ProductID=1045,CustomerID=1,ProdQty=2 },
+            new Purchase{ProductID=3141,CustomerID=1,ProdQty=2 },
             };
-
             purchases.ForEach(s => context.Purchases.Add(s));
             context.SaveChanges();
         }
