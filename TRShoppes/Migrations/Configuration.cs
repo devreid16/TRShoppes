@@ -38,6 +38,40 @@ namespace TRShoppes.Migrations
             customers.ForEach(s => context.Customers.AddOrUpdate(p => p.LastName, s));
             context.SaveChanges();
 
+            var employees = new List<Employee>
+            {
+                new Employee { EmpFirstName = "Kim",     EmpLastName = "Abercrombie",
+                    HireDate = DateTime.Parse("1995-03-11") },
+                new Employee { EmpFirstName = "Fadi",    EmpLastName = "Fakhouri",
+                    HireDate = DateTime.Parse("2002-07-06") },
+                new Employee { EmpFirstName = "Roger",   EmpLastName = "Harui",
+                    HireDate = DateTime.Parse("1998-07-01") },
+                new Employee { EmpFirstName = "Candace", EmpLastName = "Kapoor",
+                    HireDate = DateTime.Parse("2001-01-15") },
+                new Employee { EmpFirstName = "Roger",   EmpLastName = "Zheng",
+                    HireDate = DateTime.Parse("2004-02-12") }
+            };
+            employees.ForEach(s => context.Employees.AddOrUpdate(p => p.EmpLastName, s));
+            context.SaveChanges();
+
+            var departments = new List<Department>
+            {
+                new Department { Name = "Shoes", Budget = 350000,
+                    StartDate = DateTime.Parse("2007-09-01"),
+                    EmployeeID  = employees.Single( i => i.EmpLastName == "Abercrombie").ID },
+                new Department { Name = "Mens", Budget = 100000,
+                    StartDate = DateTime.Parse("2007-09-01"),
+                    EmployeeID  = employees.Single( i => i.EmpLastName == "Fakhouri").ID},
+                new Department { Name = "Womens", Budget = 350000,
+                    StartDate = DateTime.Parse("2007-09-01"),
+                    EmployeeID  = employees.Single( i => i.EmpLastName == "Harui").ID },
+                new Department { Name = "Sportswear",   Budget = 100000,
+                    StartDate = DateTime.Parse("2007-09-01"),
+                    EmployeeID  = employees.Single( i => i.EmpLastName == "Kapoor").ID }
+            };
+            departments.ForEach(s => context.Departments.AddOrUpdate(p => p.Name, s));
+            context.SaveChanges();
+
             var product = new List<Product>
             {
                 new Product{ProductID = 1050, ProdUpc = 022255588890, ProdDesc ="Coats",  ProdQty = 30, ProdPrice = 100.00m },
@@ -55,7 +89,7 @@ namespace TRShoppes.Migrations
                 new Purchase {
                     CustomerID = customers.Single(s => s.LastName == "Alexander").CustomerID,
                     ProductID = product.Single(c => c.ProdDesc == "Coats" ).ProductID,
-                    ProdQty = 1  
+                    ProdQty = 1
                 },
                  new Purchase {
                     CustomerID = customers.Single(s => s.LastName == "Alexander").CustomerID,
