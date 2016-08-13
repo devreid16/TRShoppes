@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TRShoppes.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdUpc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdUpc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
+        </td>
+    </tr>
+}
+
+</table>

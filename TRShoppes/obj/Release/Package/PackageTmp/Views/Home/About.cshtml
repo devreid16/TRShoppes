@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TRShoppes.ViewModels.PurchaseDateGroup>
+
+@{
+    ViewBag.Title = "Customer Statistics";
+}
+
+<h2>Customer Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Purchase Date
+        </th>
+        <th>
+            Customer
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseDate)
+            </td>
+            <td>
+                @item.CustomerCount
+            </td>
+        </tr>
+    }
+</table>
