@@ -3,4 +3,7 @@
   <parameter name="ShopContext-Web.config Connection String" description="ShopContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TRShoppes2.mdf;Initial Catalog=TRShoppes2.mdf;Integrated Security=SSPI;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\reida\\Documents\\Visual\ Studio\ 2015\\Projects\\TRShoppes\\TRShoppes\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShopContext']/@connectionString" />
   </parameter>
+  <parameter name="ShopContext_DatabasePublish-Web.config Connection String" description="ShopContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="ShopContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\reida\\Documents\\Visual\ Studio\ 2015\\Projects\\TRShoppes\\TRShoppes\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShopContext_DatabasePublish']/@connectionString" />
+  </parameter>
 </parameters>

@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<TRShoppes.Models.Employee>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Employee";
 }
 
-<h2>Index</h2>
+<h2>Employee</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Department.Name)
+            Department
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EmpLastName)
